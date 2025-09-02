@@ -75,6 +75,8 @@ python -m moshi.run_inference --hf-repo kyutai/stt-2.6b-en audio/bria.mp3
 If you have [uv](https://docs.astral.sh/uv/) installed, you can skip the installation step
 and just prefix the command above with `uvx --with moshi`.
 
+This may default the pytorch installation to use **cpu**, to run using **gpu** and **cuda**, append the following `--index-url https://download.pytorch.org/whl/cuXXX` replacing `XXX` with your current installed cuda version. Ex: for CUDA 12.6, use `cu126`
+
 Additionally, we provide two scripts that highlight different usage scenarios. The first script illustrates how to extract word-level timestamps from the model's outputs:
 
 ```bash
@@ -248,6 +250,8 @@ echo "Hey, how are you?" | python scripts/tts_pytorch_streaming.py audio_output.
 This requires the [moshi package](https://pypi.org/project/moshi/), which can be installed via pip.
 If you have [uv](https://docs.astral.sh/uv/) installed, you can skip the installation step
 and just prefix the command above with `uvx --with moshi`.
+
+This may default the pytorch installation to use **cpu**, to run using **gpu** and **cuda**, append the following `--index-url https://download.pytorch.org/whl/cuXXX` replacing `XXX` with your current installed cuda version. Ex: for CUDA 12.6, use `cu126`
 </details>
 
 <details>
